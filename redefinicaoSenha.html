@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/img/logoNomeDuo.svg">
+        <link rel="stylesheet" href="redefinicaoSenha.css">
+        <title>Recuperação de Senha</title>
+    </head>
+    <body>
+        <div class="password-recovery-card">
+            <img src="assets/img/logoDuo.svg" alt="Logo">
+            <h1>Recuperação de Senha</h1>
+            <form id="redefinicaoForm">
+                <input type="email" placeholder="Email" required>
+                <input type="submit" value="Enviar Pedido de Redefinição">
+            </form>
+        </div>
+
+        <script>
+            document.getElementById("redefinicaoForm").addEventListener("submit", function(event) {
+                window.location.href = 'redefinicaoSenhaConclusao.html'; 
+                event.preventDefault(); 
+            });
+        </script>
+    </body>
+</html>
