@@ -22,15 +22,6 @@
     </div>
 
     <script>
-      function validar_form() {
-          var senha = document.getElementById("senha");
-          if (senha.value === "") {
-             alert("Senha não informada");
-          }
-          if (senha.value.length < 8) {
-              alert("Senha deve ter pelo menos 8 caracteres");
-          }
-      }
       document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
         var emailInput = document.querySelector('input[type="email"]');
@@ -38,7 +29,10 @@
 
         if (!emailInput.checkValidity() || !senhaInput.checkValidity()) {
           alert("Por favor, preencha o email e a senha corretamente.");
-        }  
+        } else {
+          // Se o formulário é válido, redireciona para telaInicial.html
+          window.location.href = "telaInicial.html";
+        }
       });
     </script>
   </body>
